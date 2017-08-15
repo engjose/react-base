@@ -1,0 +1,25 @@
+<html>
+
+    <div id="example1"></div>
+    <div id="example2"></div>
+
+    <script type="text/javascript" src="../js/react.js"></script>
+    <script type="text/javascript" src="../js/react-dom.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <script type="text/javascript">
+        var vDom1 = React.createElement('h1', {id:'myTitle'}, 'Hello DOM1');
+        ReactDOM.render(
+            vDom1,
+            document.getElementById('example1')
+        );
+    </script>
+
+    <script type="text/babel">
+        var vDom2 = <h1 id="myTitle2">Hello DOM2</h1>;
+        ReactDOM.render(
+            vDom2,
+            document.getElementById('example2')
+        );
+    </script>
+</html>

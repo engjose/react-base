@@ -1,0 +1,36 @@
+<html>
+    <script type="text/javascript" src="../js/react.js"></script>
+    <script type="text/javascript" src="../js/react-dom.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <div id="example1"></div>
+    <div id="example2"></div>
+
+    <script type="text/babel">
+        function MyComponent1() {
+            return (
+                <h1>Hello React Component1</h1>
+            );
+        }
+
+        ReactDOM.render(
+            <MyComponent1/>,
+            document.getElementById('example1')
+        );
+
+        class MyComponent2 extends React.Component {
+            render() {
+                return (
+                    <h1>
+                        Hello React Component2
+                    </h1>
+                );
+            }
+        }
+
+        ReactDOM.render(
+            <MyComponent2/>,
+            document.getElementById('example2')
+        );
+    </script>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <script type="text/javascript" src="../js/react.js"></script>
+    <script type="text/javascript" src="../js/react-dom.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <div id="example1"></div>
+    <div id="example2"></div>
+
+    <script type="text/babel">
+        class MyComponent extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    isLikeMe: true,
+                };
+
+                this.changeState = this.changeState.bind(this);
+            }
+
+            render() {
+                let text = this.state.isLikeMe ? '你喜欢我' : '我喜欢你';
+                return (
+                    <h1 onClick={this.changeState}>{text}</h1>
+                );
+            }
+
+            changeState(event) {
+                this.setState({isLikeMe: !this.state.isLikeMe});
+            }
+        }
+
+        ReactDOM.render(
+            <MyComponent/>,
+            document.getElementById('example1')
+        );
+    </script>
+</html>

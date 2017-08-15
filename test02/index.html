@@ -1,0 +1,38 @@
+<html>
+    <script type="text/javascript" src="../js/react.js"></script>
+    <script type="text/javascript" src="../js/react-dom.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <div id="example1"></div>
+    <div id="example2"></div>
+
+    <script type="text/babel">
+        var arr = ['apple', 'banana', 'orange'];
+        let vDom = (
+            <ul>
+                {
+                    arr.map((name) => {
+                        return <li>{name}</li>
+                    })
+                }
+            </ul>
+        );
+
+        ReactDOM.render(
+            vDom,
+            document.getElementById('example1')
+        );
+
+        ReactDOM.render(
+            <ul>
+                {
+                    arr.map(name => {
+                        return <li>{name}</li>
+                    })
+                }
+            </ul>,
+            document.getElementById('example2')
+        );
+
+    </script>
+</html>
